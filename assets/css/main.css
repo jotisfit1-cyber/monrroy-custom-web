@@ -1129,7 +1129,25 @@ input, select, textarea {
 			width: 100%;
 			height: 100%;
 		}
-
+#bg:after {
+    /* Mantiene las propiedades base de la plantilla */
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* Vinculamos tu imagen bg.jpg y le aplicamos un overlay oscuro */
+    background-image: linear-gradient(to top, rgba(18, 18, 20, 0.88), rgba(18, 18, 20, 0.55)), 
+                      url('../../images/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 1;
+    z-index: 1;
+}
 		#bg:before {
 			-moz-transition: background-color 2.5s ease-in-out;
 			-webkit-transition: background-color 2.5s ease-in-out;
@@ -1140,9 +1158,12 @@ input, select, textarea {
 			-ms-transition-delay: 0.75s;
 			transition-delay: 0.75s;
 			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/overlay.png");
-			background-size: auto, 256px 256px;
-			background-position: center, center;
-			background-repeat: no-repeat, repeat;
+			background-size: auto,
+ 256px 256px;
+			background-position: center,
+ center;
+			background-repeat: no-repeat,
+ repeat;
 			z-index: 2;
 		}
 
